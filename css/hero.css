@@ -1,0 +1,341 @@
+  /* Hero Section Styles */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f9fafb 0%, #e8f5fe 100%);
+    overflow: hidden;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .content-text {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .animation-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #023e8a;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #0077b6;
+    max-width: 600px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #0096c7;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0077b6;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 119, 182, 0.2);
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    color: #0096c7;
+    border: 2px solid #0096c7;
+  }
+  
+  .btn-outline:hover {
+    background-color: #0096c7;
+    color: white;
+  }
+  
+  .fade-up {
+    animation: fadeUp 1s ease-out;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Flower Animation */
+  .flower {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .petal {
+    position: absolute;
+    width: 35px;
+    height: 60px;
+    background: linear-gradient(180deg, #e8f5fe, #0077b6);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    animation: cellPulsation 8s infinite ease;
+  }
+  
+  .petal1 {
+    transform: rotate(0deg) translateY(-50%);
+    animation-delay: 0.1s;
+  }
+  
+  .petal2 {
+    transform: rotate(45deg) translateY(-50%);
+    animation-delay: 0.2s;
+  }
+  
+  .petal3 {
+    transform: rotate(90deg) translateY(-50%);
+    animation-delay: 0.3s;
+  }
+  
+  .petal4 {
+    transform: rotate(135deg) translateY(-50%);
+    animation-delay: 0.4s;
+  }
+  
+  .petal5 {
+    transform: rotate(180deg) translateY(-50%);
+    animation-delay: 0.5s;
+  }
+  
+  .petal6 {
+    transform: rotate(225deg) translateY(-50%);
+    animation-delay: 0.6s;
+  }
+  
+  .petal7 {
+    transform: rotate(270deg) translateY(-50%);
+    animation-delay: 0.7s;
+  }
+  
+  .petal8 {
+    transform: rotate(315deg) translateY(-50%);
+    animation-delay: 0.8s;
+  }
+  
+  .center {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #48cae4;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(72, 202, 228, 0.5);
+    animation: coreCell 3s infinite;
+  }
+  
+  .inner-cells {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #caf0f8;
+    border-radius: 50%;
+    z-index: 3;
+  }
+  
+  .petal {
+    animation-name: cellRegenerationColor;
+    animation-duration: 8s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+  
+  .flower {
+    animation-name: slowRotation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes cellRegenerationColor {
+    0% {
+      background: linear-gradient(180deg, #e8f5fe, #0077b6);
+    }
+    25% {
+      background: linear-gradient(180deg, #d8f3fa, #00b4d8);
+    }
+    50% {
+      background: linear-gradient(180deg, #caf0f8, #90e0ef);
+    }
+    75% {
+      background: linear-gradient(180deg, #ade8f4, #48cae4);
+    }
+    100% {
+      background: linear-gradient(180deg, #e8f5fe, #0096c7);
+    }
+  }
+  
+  @keyframes slowRotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes coreCell {
+    0% {
+      box-shadow: 0 0 5px rgba(72, 202, 228, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(72, 202, 228, 0.8);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(72, 202, 228, 0.5);
+    }
+  }
+  
+  /* Background Elements */
+  .bg-cells {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.1;
+  }
+  
+  .bg-cell {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #0096c7;
+    border-radius: 50%;
+    animation: floatCell 10s infinite ease-in-out;
+  }
+  
+  @keyframes floatCell {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-20px) translateX(10px);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .hero-content {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    
+    .content-text {
+      padding-right: 0;
+      margin-top: 2rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    .subtitle {
+      font-size: 1.1rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .flower {
+      width: 250px;
+      height: 250px;
+    }
+    
+    .petal {
+      width: 30px;
+      height: 50px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+    
+    .subtitle {
+      font-size: 1rem;
+    }
+    
+    .btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+    
+    .flower {
+      width: 200px;
+      height: 200px;
+    }
+    
+    .petal {
+      width: 25px;
+      height: 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+    
+    .flower {
+      width: 180px;
+      height: 180px;
+    }
+    
+    .petal {
+      width: 20px;
+      height: 35px;
+    }
+    
+    .btn {
+      display: block;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+    
+    .btn-outline {
+      margin-left: 0 !important;
+    }
+  }
