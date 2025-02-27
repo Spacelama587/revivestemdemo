@@ -16,7 +16,7 @@
 
 .subtitle {
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: #023e8a;
     margin-bottom: 3rem;
 }
 
@@ -48,7 +48,7 @@
 /* Icons */
 .bento-icon {
     font-size: 2rem;
-    color: var(--secondary-color);
+    color:#023e8a;
     margin-bottom: 16px;
 }
 
@@ -56,7 +56,7 @@
 .bento-box h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: #023e8a;
     margin-bottom: 12px;
 }
 
